@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MY PROFILE"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="100dp"
+                android:id="@+id/myProfileTag"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/profileInitials"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_below="@id/myProfileTag"
+                android:layout_marginTop="10dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:layout_gravity="end"
+                android:text="--"
+                android:layout_marginLeft="20dp"
+                app:strokeColor="@color/white"
+                app:backgroundTint="@color/button_default_background"
+                app:cornerRadius="60dp"
+                app:strokeWidth="2dp"
+                android:backgroundTint="@color/transparent"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/userDetails"
+                android:layout_below="@id/profileInitials"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Name"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txtFirstNameTitle"/>
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/txtFirstNameTitle"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtFirstName"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Middle Name"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="40dp"
+                    android:id="@+id/txtMiddleNameTitle"/>
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="20dp"
+                    android:layout_below="@id/txtMiddleNameTitle"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtMiddleName"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edtFirstName"
+                    android:layout_marginTop="20dp"
+                    android:text="Last Name"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txtLastNameTitle"/>
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/txtLastNameTitle"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtLastName"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/contactDetails"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/userDetails">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Slack Username"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txtEmail"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/txtEmail"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtEmail"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Github Handle"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txtPhone"
+                    android:layout_below="@+id/edtEmail"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/txtPhone"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtGtHandle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Bio"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/txtBiography"
+                    android:layout_below="@+id/edtGtHandle"/>
+                <EditText
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/txtBiography"
+                    android:background="@drawable/edittextcustomprofile"
+                    android:backgroundTint="@color/grey_profile"
+                    android:id="@+id/edtBiography"/>
+
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:id="@+id/btnSaveUserInfo"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/button_default_background"
+                app:cornerRadius="30dp"
+                android:layout_below="@id/contactDetails"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>

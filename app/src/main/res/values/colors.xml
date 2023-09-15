@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="button_default_background">#880808</color>
+    <color name="button_pressed_background">#AA4A44</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey_profile">#36454F</color>
+</resources>

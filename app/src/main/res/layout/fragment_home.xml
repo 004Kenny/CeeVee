@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/customButton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="32dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_alignParentEnd="true"
+            android:text="--"
+            app:strokeColor="@color/white"
+            app:backgroundTint="@color/button_default_background"
+            app:cornerRadius="40dp"
+            app:strokeWidth="2dp"
+            android:backgroundTint="@color/transparent"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/greetingId"
+            android:layout_marginTop="100dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30sp"
+                android:textAllCaps="false"
+                android:text="Greetings"
+                android:textSize="20sp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/greeting"
+                android:textColor="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text=","
+                android:textSize="20sp"
+                android:id="@+id/comma"
+                android:layout_toRightOf="@id/greeting"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name of user"
+                android:textAllCaps="false"
+                android:layout_below="@id/greeting"
+                android:textSize="30sp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Curriculum Vitae"
+            android:id="@+id/cvTitle"
+            android:layout_below="@id/greetingId"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name:"
+            android:id="@+id/txtUsername"
+            android:layout_below="@id/cvTitle"
+            android:layout_marginTop="50dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:id="@+id/fullName"
+            android:layout_below="@id/txtUsername"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slack Name:"
+            android:id="@+id/txtSlack"
+            android:layout_below="@id/fullName"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:id="@+id/slack"
+            android:layout_below="@id/txtSlack"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Github Username:"
+            android:id="@+id/txtgithub"
+            android:layout_below="@id/slack"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:id="@+id/github"
+            android:layout_below="@id/txtgithub"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Biography:"
+            android:id="@+id/txtbio"
+            android:layout_below="@id/github"
+            android:layout_marginTop="10dp"
+            android:textSize="30sp"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:id="@+id/biography"
+            android:layout_below="@id/txtbio"
+            android:layout_marginTop="10dp"
+            android:textSize="25sp"
+            android:layout_marginLeft="20dp"/>
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+</FrameLayout>
