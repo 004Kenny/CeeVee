@@ -12,6 +12,7 @@ public class MyViewModel extends ViewModel {
     private final MutableLiveData<String> inputDataFour = new MutableLiveData<>();
     private final MutableLiveData<String> inputDataFive = new MutableLiveData<>();
     private final MutableLiveData<String> inputDataSix = new MutableLiveData<>();
+    private final MutableLiveData<String> inputDataSeven = new MutableLiveData<>();
 
 
     public void setInputData(String text) {
@@ -32,6 +33,9 @@ public class MyViewModel extends ViewModel {
     public void setInputDataSix(String text) {
         inputData.setValue(text);
     }
+    public void setInputDataSeven(String text) {
+        inputData.setValue(text);
+    }
 
     public LiveData<String> getInputData() {
         return inputData;
@@ -49,6 +53,9 @@ public class MyViewModel extends ViewModel {
         return inputDataFive;
     }
     public LiveData<String> getInputDataSix() {
+        return inputDataSix;
+    }
+    public LiveData<String> getInputDataSeven() {
         return inputDataSix;
     }
 

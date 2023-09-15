@@ -34,6 +34,9 @@ public class HomeScreen extends AppCompatActivity {
                 } else if (item.getItemId() == R.id.ac_profile) {
                     loadFragment(new Profile());
                     return true;
+                } else if (item.getItemId() == R.id.ac_logout){
+                    finish();
+                    return  true;
                 }
                 return false;
             }

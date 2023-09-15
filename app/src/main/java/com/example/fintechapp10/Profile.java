@@ -47,7 +47,7 @@ public class Profile extends Fragment {
 
         View rootView = inflater.inflate(R.layout.fragment_profile, container, false);
         saveBtn = rootView.findViewById(R.id.btnSaveUserInfo);
-        userInitials = rootView.findViewById(R.id.profileInitials);
+
 
         edtFirstName = rootView.findViewById(R.id.edtFirstName);
         String firstName = sharedPreferences.getString("key_for_data1", "");
@@ -95,17 +95,16 @@ public class Profile extends Fragment {
                 editor.putString("key_for_data6", inputDataSix);
                 editor.apply();
 
-                updateInitials();
 
                 Toast.makeText(requireContext(), "Data saved!", Toast.LENGTH_SHORT).show();
 
 
                 model.setInputData(inputData);
-                model.setInputData(inputDataTwo);
-                model.setInputData(inputDataThree);
-                model.setInputData(inputDataFour);
-                model.setInputData(inputDataFive);
-                model.setInputData(inputDataSix);
+                model.setInputDataTwo(inputDataTwo);
+                model.setInputDataThree(inputDataThree);
+                model.setInputDataFour(inputDataFour);
+                model.setInputDataFive(inputDataFive);
+                model.setInputDataSix(inputDataSix);
             }
         });
 
@@ -113,19 +112,4 @@ public class Profile extends Fragment {
        return rootView;
     }
 
-    public void updateInitials(){
-        String fName = edtFirstName.getText().toString();
-        String lName = edtLastName.getText().toString();
-
-        char firstInitial = fName.charAt(0);
-        char lastInitial = lName.charAt(0);
-
-
-        String firstInitialString = String.valueOf(firstInitial);
-        String lastInitialString = String.valueOf(lastInitial);
-
-        if (userInitials != null){
-            userInitials.setText(firstInitialString + lastInitialString);
-        }
-    }
 }

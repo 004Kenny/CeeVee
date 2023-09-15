@@ -14,22 +14,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/customButton"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="116dp"
-            android:layout_marginEnd="32dp"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25sp"
-            android:layout_alignParentEnd="true"
-            android:text="--"
-            app:strokeColor="@color/white"
-            app:backgroundTint="@color/button_default_background"
-            app:cornerRadius="40dp"
-            app:strokeWidth="2dp"
-            android:backgroundTint="@color/transparent"/>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -57,6 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Name of user"
+                android:id="@+id/name_of_user"
                 android:textAllCaps="false"
                 android:layout_below="@id/greeting"
                 android:textSize="30sp"
@@ -92,6 +77,7 @@
             android:id="@+id/fullName"
             android:layout_below="@id/txtUsername"
             android:layout_marginTop="10dp"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_marginLeft="20dp"/>
 
@@ -109,6 +95,7 @@
             android:layout_height="wrap_content"
             android:text="--"
             android:id="@+id/slack"
+            android:textColor="@color/white"
             android:layout_below="@id/txtSlack"
             android:layout_marginTop="10dp"
             android:textSize="25sp"
@@ -126,6 +113,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="--"
+            android:textColor="@color/white"
             android:id="@+id/github"
             android:layout_below="@id/txtgithub"
             android:layout_marginTop="10dp"
@@ -147,6 +135,7 @@
             android:id="@+id/biography"
             android:layout_below="@id/txtbio"
             android:layout_marginTop="10dp"
+            android:textColor="@color/white"
             android:textSize="25sp"
             android:layout_marginLeft="20dp"/>
 

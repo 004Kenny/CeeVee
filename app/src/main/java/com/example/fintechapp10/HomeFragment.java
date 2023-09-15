@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class HomeFragment extends Fragment {
@@ -22,6 +23,8 @@ public class HomeFragment extends Fragment {
     private TextView displayGithub;
     private TextView displayBiography;
     private MyViewModel viewModel;
+    private Button displayInitials;
+    private TextView displayGreetings;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -37,32 +40,67 @@ public class HomeFragment extends Fragment {
         displaySlack = rootView.findViewById(R.id.slack);
         displayGithub = rootView.findViewById(R.id.github);
         displayBiography = rootView.findViewById(R.id.biography);
+        displayInitials = rootView.findViewById(R.id.customButton);
+        displayGreetings = rootView.findViewById(R.id.name_of_user);
+
+
+        SharedPreferences sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE);
+
+        String fname = sharedPreferences.getString("key_for_data1", "");
+        String lname = sharedPreferences.getString("key_for_data2", "");
+        String mname = sharedPreferences.getString("key_for_data3", "");
+        String slackHandle = sharedPreferences.getString("key_for_data4", "");
+        String githubHandle = sharedPreferences.getString("key_for_data5", "");
+        String biography = sharedPreferences.getString("key_for_data6", "");
+        String initials = sharedPreferences.getString("initials", "");
+
+        String displayText = fname + " " + mname + " " + lname;
+        String displayNameText = fname;
+        displayName.setText(displayText);
+        displaySlack.setText(slackHandle);
+        displayGithub.setText(githubHandle);
+        displayBiography.setText(biography);
+        displayGreetings.setText(displayNameText);
+
 
         viewModel = new ViewModelProvider(requireActivity()).get(MyViewModel.class);
-
-        viewModel.getInputData().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(String inputData) {
-                displayName.setText(inputData);
-
-            }
-        });
-
-
         return rootView;
     }
 
-    @Override
+   /* @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        SharedPreferences sharedPreferences = requireContext().getSharedPreferences("saved_data", Context.MODE_PRIVATE);
+        viewModel.getConcatenatedInputData().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String concatenatedData) {
+                // Update your UI with the concatenated data
+                displayName.setText(concatenatedData);
+            }
+        });
 
-        String name = sharedPreferences.getString("key_for_data1", "");
+        viewModel.getInputDataFour().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String newData) {
+                // Update your UI with the new data for input field 2
+                displaySlack.setText(newData);
+            }
+        });
 
-        String displayText = name;
-        displayName.setText(displayText);
+        viewModel.getInputDataFive().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String newData) {
+                // Update your UI with the new data for input field 2
+                displayGithub.setText(newData);
+            }
+        });
 
-
-    }
+        viewModel.getInputDataSix().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String newData) {
+                // Update your UI with the new data for input field 2
+                displayBiography.setText(newData);
+            }
+        });
+    }*/
 }
